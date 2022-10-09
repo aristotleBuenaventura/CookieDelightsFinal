@@ -1,0 +1,69 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar class="header">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Shop Policy</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="title">Shop Policy</h1>
+          <hr class="line mb-2">
+        </div>
+      </div>
+    </div>
+  <ion-card>
+    <div class="container">
+
+      <img src="assets/icons/policy.png" class="center mb-3">
+      <p>Please read this before purchasing so you can be guided of our shop policy.</p>
+    
+      <h1 class="title mt-5" >Section 1</h1>
+      <p class="left">By Ordering from CookieDelights you agree to the following:</p>
+      <ul type="disc">
+        <li>	Orders without proof of payment will be automatically canceled.</li>
+        <li>  Once paid, all order details will become FINAL. Please double-check the amount and type of cookies you purchased.</li>
+        <li>  Please make sure that you are present during delivery time. The waiting day is within the day the order was placed. (Please refer to section 2, third bullet for details.)</li>
+        <li>  Delivery may take 1-2 days depending on your location.</li>
+        <li>  Please put your real name and address to avoid confusion. Other information is also indicated for customers who wish to add notes for the placed order. </li>
+        <li>  First come first serve, we do not allow reservations. </li>
+        <li>  Actual product MAY look slightly different from the images we provided.</li>
+        <li>  Our store is open from 8 AM - 6 PM only but the app is available 24/7 as it is an online service.</li>
+      </ul>
+    
+      <h1 class="title">Section 2</h1>
+      <p class="left">In case we failed to deliver/ no one is there to pick up the order:</p>
+      <ul>
+        <li>  <a routerLink="/contact-us">Contact us</a>.</li>
+        <li>  Chauffeurs may leave the product to their guard/lobby, otherwise, the order is canceled.</li>
+        <li>  If the customer have messaged within the day of purchase, a reattempt could be possible. However, we will charge extra fees for it. </li>
+        <li>  No refund if there's a delay in pickup of the customer. </li>
+        <li>  There will be a 30% refund if the package is damaged upon delivery due to natural disasters or the careless of our chauffeurs.</li>
+        
+      </ul>
+      <p class="left"><i>*We assure you that we guarantee your safety, and the personal information you'll give to us is only for our staff to package, deliver, and receive your orders.</i> </p>
+      
+     
+    </div>
+  </ion-card>
+  <div class="container">
+    <div class="row">
+      <div class="col me-2 mb-4">
+        <h6>©SweetCreations</h6>
+      </div>
+    </div>
+  </div>
+  </ion-content>
+  </ion-app>
+  

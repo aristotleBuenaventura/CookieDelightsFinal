@@ -1,0 +1,56 @@
+ion-content{
+  --ion-background-color:#E9DAC1;
+  text-align: justify;
+}
+
+ion-card{
+  --ion-background-color: white;
+  padding:10px;
+  font-size: 15px;
+}
+
+.header{
+  --background: #603813;
+  color:#F5B97D;
+}
+
+.started{
+  color: #FFFFFF;
+  font-family: "vanilla";
+  background-color: #603813;
+}
+
+ion-item-divider{
+  --background:#603813;
+  height: 1px;
+}
+
+
+img {
+height: 200px;
+width: 200px;
+margin: 0px auto;
+display: block;
+}
+
+.left{
+  text-align: center;
+  font-size: 21px;
+  color: #603813;
+  font-family: "inter";
+}
+
+
+h1{
+  font-family: "Vanilla";
+  text-align: center;
+  color: #603813;
+  font-size: 40px;
+}
+
+
+.bg-menu{
+    background-color: #f5b97d;
+    
+}
+

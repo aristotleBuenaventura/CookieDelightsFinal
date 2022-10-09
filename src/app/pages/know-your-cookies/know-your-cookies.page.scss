@@ -1,0 +1,91 @@
+.line{
+    width:100%; 
+    height:5px; 
+    background: #603813;
+    margin: 0;
+  }
+
+  ion-content{
+    --ion-background-color:#E9DAC1;
+    text-align: justify;
+}
+
+ion-card{
+    --ion-background-color:rgba(255, 255, 255, 0.8);
+    padding:10px;
+    font-size: 15px;
+}
+
+.header{
+    --background: #603813;
+    color:#F5B97D;
+  }
+
+.title{
+    font-family: 'Vanilla';
+    font-size: 26px;
+}
+
+p{
+    color: #603813;
+}
+
+.cookieImageChocolate {
+    height: 100px;
+}
+ 
+  .cookieImageGinger{
+    height: 100px;
+
+  }
+  
+  .cookieImageOatmeal{
+    height: 140px;
+
+  }
+  
+  .cookieImagePeanut{
+    height: 110px;
+
+  }
+  
+  .cookieImageWhoopie{
+    height: 140px;
+
+  }
+  
+  .cookieImageSugar{
+    height: 80px;
+
+  }
+  
+  .cookieImageBiscotti{
+    height: 110px;
+
+  }
+  
+  .cookieImageSpritz{
+    height: 100px;
+
+  }
+  
+  .cookieImagePinwheel{
+    height: 120px;
+
+  }
+  
+  .cookieImageButter{
+    height: 140px;
+
+  }
+
+.cookieName {
+    font-size: 20px;
+    font-family: 'Vanilla';
+    color: #603813;
+}
+
+.cookieDescription {
+    font-weight: 700;
+    color: black;
+}

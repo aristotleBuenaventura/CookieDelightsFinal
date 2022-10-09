@@ -1,0 +1,53 @@
+<ion-app>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="header">
+      <ion-title class="header">
+        Cookie Preparation
+      </ion-title>
+      <ion-buttons slot="start" >
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mt-3">
+          <h1>Cookie Preparation</h1>
+          <hr class="line mb-2">
+        </div>
+      </div>
+    </div>
+
+    <img class="pic" src="assets/icons/Cooks.png" class="center">
+    <h1>"A Guide on How to Eat your Cookies"</h1>
+    <ion-card>
+      <ul class="left" type="disc">
+        <li> Try to serve the cookies as soon as it is delivered and received specially for chocolate chip cookies.</li>
+        <li> Eat the chocolate as it is still sticky and melting on your  mouth as you take a bite from it.</li>
+        <li> Place the cookies in an airtight container or a room temperature area in a dry place to keep its consistency an potency of its taste.</li>
+        <li> It is not recommended to store them in the refrigerator if it is not inside an airtight container as it dries faster.</li>
+        <li> If you are not able to finish the serving of cookies you ordered you can wrap it in foil and store it in the freezer.</li>
+        <li> When heating the cookies you can turn the heat up to 175 Celsius for 2-6 minutes for guaranteed fresh cookies.</li>
+        <li> You can store the cookies up to 1 month and then reheat before serving again.</li>
+        <li> Frozen cookies needs to be heated up to 175 Celsius for 3-8 minutes then let it thaw for 2 minutes before serving.</li>
+      </ul>
+    </ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col me-2 mb-4">
+          <h6>©SweetCreations</h6>
+        </div>
+      </div>
+    </div>
+
+    </ion-content>
+</ion-app>

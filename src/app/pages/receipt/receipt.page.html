@@ -1,0 +1,74 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar class="header">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="container">
+      <div class="row">
+        <div class="col mt-3">
+          <p>Select mode of payment:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio1" id="check" onclick="EnableDisableTextbox()" name="optradio" value="option1" checked>Cash-on-Delivery
+            <label class="form-check-label" for="radio1"></label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio2"  name="optradio" value="option2">Card
+            <label class="form-check-label" for="radio2"></label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mt-3">
+          <form action="" [formGroup]="receipt" class="row needs-validation" novalidate>
+
+            <div class="mb-3">
+              <label class="form-label">Card:</label>
+              <input type="text" id="card" class="form-control"  placeholder="XXXX-XXXX-XXXX-XXXX-XXXX" >
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Name:</label>
+              <input type="text" id="name" formControlName="name" class="form-control"  placeholder="Last Name, First Name, Middle Name" required>
+              <ng-container *ngIf="receipt.get('name').hasError('required') && (receipt.get('name').touched || receipt.get('name').dirty)">Please input your full name.</ng-container>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Address:</label>
+              <input type="text" id="address" formControlName="address" class="form-control"  placeholder="Address" required>
+              <ng-container *ngIf="receipt.get('address').hasError('required') && (receipt.get('address').touched || receipt.get('address').dirty)">Please input your address.</ng-container>
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Other information:</label>
+              <textarea class="form-control"  rows="3" placeholder="Other information"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container">
+      
+      <div class="row">
+        <div class="col text-center">
+          <button type="button" (click)="complete()" class="btn text-light mb-3">Complete Order</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button type="button"  class="btn btn2 text-light" routerLink="/products">Cancel Order</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+

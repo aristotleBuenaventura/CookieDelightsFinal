@@ -1,0 +1,213 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar class="header">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mt-3">
+          <p class="title">About our Cookies</p>
+          <hr class="line mb-2">
+        </div>
+      </div>
+    </div>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/chocolateChip.png" class="cookieImageChocolate">
+          <div class="cookieName">Chocolate Chip</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            Chocolate chip cookies are drop cookies with chocolate chip toppings that can be soft and doughy or crisp and crispy.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/gingersnaps.png" class="cookieImageGinger">
+          <div class="cookieName">Gingersnaps</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            This well-known holiday treat has the ideal balance of sweetness and spiciness thanks to ginger, cinnamon, molasses, and powdered nutmeg spices.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/oatmeal.png" class="cookieImageOatmeal">
+          <div class="cookieName">Oatmeal Raisin</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            Oatmeal raisin cookies are another variety of drop cookies that are terribly underappreciated. Brown sugar, raisins, and oatmeal make up the dough. They bring back memories of simpler times and grandma's home and are warm and comfortable.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/peanutbutter.png" class="cookieImagePeanut">
+          <div class="cookieName">Peanut Butter</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            A favorite peanut butter fan, these cookies are prepared with hand-rolled dough, often flattened with a fork to create a recognizable waffle pattern.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/whoopie.png" class="cookieImageWhoopie">
+          <div class="cookieName">Whoopee Pie</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            Two soft, pillowy cookies are combined with a marshmallow filling to create these sandwich-style sweets. Whoopie pies were first sold in Maine and are now exceedingly well-liked. Baker traditionally made Whoopie pies with chocolate biscuits.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/sugar.png" class="cookieImageSugar">
+          <div class="cookieName">Sugar Cookies</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            Everyone like sugar cookies, but few people can honestly say they are their favorite. It's kind of like vanilla ice cream or cookies. This ordinary cookie comprises simple ingredients, including sugar, flour, butter, eggs, and vanilla.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/biscotti.png" class="cookieImageBiscotti">
+          <div class="cookieName">Biscotti</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            The term "biscotti" literally translates to "twice-cooked/baked" since biscotti are baked twice, giving them a firm texture and a long shelf life. 
+Its origins may be traced to ancient Rome, which served as a practical snack for travelers.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/spritz.png" class="cookieImageSpritz">
+          <div class="cookieName">Spritz Cookies</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            Spritz cookies are made by squirting the dough through a cookie press to create intricate designs. Various flavors and colors, including almond, peanut butter, orange, chocolate, and others, are available in spritz cookies. For a festive treat, dunk them in chocolate and sprinkle on some decorations.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/pinwheel.png" class="cookieImagePinwheel">
+          <div class="cookieName">Pinwheel Cookies</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            The holiday season is the ideal time to make these gorgeous pinwheel cookies! These cookies are simple to make and sweet and buttery. These cookies will steal the show's captivating swirls of vanilla and chocolate!
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/butter.png" class="cookieImageButter">
+          <div class="cookieName">Butter Cookies</div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col">
+          <div class="cookieDescription">
+            Butter cookies feature a high butter-to-flour ratio, similar to shortbread cookies. The difference is that butter cookies have more sugar and flour than shortbread, which helps them maintain their shape better.
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col me-2 mt-0 mb-4">
+      <h6>©SweetCreations</h6>
+    </div>
+  </div>
+</div>
+
+<!-- <ion-card>
+  <img src="assets/people/buenaventura.png" class="image-border">
+    <p>Name</p>
+    <h1 class="content">Aristotle C. Bunaventura</h1>
+    <p>Contact</p>
+    <h1 class="content">09395674482</h1>
+</ion-card> -->
+</ion-content>

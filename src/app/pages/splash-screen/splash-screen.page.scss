@@ -1,0 +1,39 @@
+ion-content{
+
+    --ion-background-color:#e9dac1;
+    --overflow: hidden;
+  }
+
+ion-footer{
+
+    --ion-background-color:#e9dac1;
+
+} 
+
+.splash{
+    position: absolute;
+    transition: left 1s;
+    background:#e9dac1;
+    z-index: 100;
+}
+
+.bgCookie{
+    background:#e9dac1;
+    
+}
+
+.box{
+    position: relative;
+    
+}
+
+.logo{
+    position: relative;
+    top: 150px;
+}
+
+// .bottomCookies{
+//     position: relative;
+//     bottom: 0px;
+    
+// }

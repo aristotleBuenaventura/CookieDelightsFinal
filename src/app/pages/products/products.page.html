@@ -1,0 +1,383 @@
+<ion-header >
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" color="danger"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCart()" #cart class="cart">
+        <div class="cart-length">{{cartItemCount | async }}</div>
+        <ion-icon name="cart" class="cart-icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+       <ion-title class="header">
+          Products
+        </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="container">
+    <div class="row">
+      <div class="col text-center mt-3">
+        <p class="title">Products</p>
+        <hr class="line mb-2">
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngFor="let p of products">
+      <div class="row">
+        <div class="col">
+          <p class="fw-bold mb-0 ms-2">{{p.group}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src={{p.image}} class={{p.class}}>
+          <ion-card class="box bg-light">
+            <ion-card-header class="ms-5">
+              <p class="cookieName ms-3">{{p.name}}</p>
+              <hr class="line-product ms-3">
+            </ion-card-header>
+          
+            <ion-card-content class="ms-5 mt-0">
+              <div class="row gx-0 ">
+                <div class="col mt-1">
+                  <p class="fw-bold ms-3">{{p.type}}</p>
+                </div>
+                <div class="col ">
+                  <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+                </div>
+              </div>
+              <div class="row  g-0">
+                <div class="col ">
+                  <p class="price ms-3 mt-0">{{p.price | currency:'PHP'}}</p>
+                </div>
+                <div class="col mt-2 ms-4">
+                  <button type="button" (click)="addToCart(p)" class="btn text-light">Buy</button>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col me-2 mb-4">
+        <h6>©SweetCreations</h6>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/gingersnaps.png" class="cookieImageGinger">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Gingersnaps</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Best Seller:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱105</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/oatmeal.png" class="cookieImageOatmeal">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Oatmeal Raisin</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Best Seller:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱115</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="fw-bold mt-3 mb-0 ms-2">Kiddie Treats</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="assets/peanutbutter.png" class="cookieImagePeanut">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Peanut Butter</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Ratings:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱100</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/whoopie.png" class="cookieImageWhoopie">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Whoopee Pie</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Ratings:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱115</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/sugar.png" class="cookieImageSugar">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Sugar Cookies</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Ratings:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱180</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col">
+          <p class="fw-bold mt-3 mb-0 ms-2">Premium</p>
+        </div>
+      </div>
+      <div class="col">
+        <img src="assets/biscotti.png" class="cookieImageBiscotti">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Biscotti</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Ratings:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱150</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/spritz.png" class="cookieImageSpritz">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Spritz Cookies</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Ratings:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱160</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/pinwheel.png" class="cookieImagePinwheel">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Pinwheel Cookies</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Ratings:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱120</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/butter.png" class="cookieImageButter">
+        <ion-card class="box bg-light">
+          <ion-card-header class="ms-5">
+            <p class="cookieName ms-3">Butter Cookies</p>
+            <hr class="line-product ms-3">
+          </ion-card-header>
+        
+          <ion-card-content class="ms-5 mt-0">
+            <div class="row gx-0 ">
+              <div class="col mt-1">
+                <p class="fw-bold ms-3">Ratings:</p>
+              </div>
+              <div class="col ">
+                <img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon"><img src="assets/icon/star.png" class="icon">
+              </div>
+            </div>
+            <div class="row  g-0">
+              <div class="col ">
+                <p class="price ms-3 mt-0">₱100</p>
+              </div>
+              <div class="col mt-2 ms-4">
+                <button type="button" class="btn text-light">Buy</button>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div> -->
+
+  
+
+

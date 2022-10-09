@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="header">
+      <ion-title class="header">
+        Company History
+      </ion-title>
+      <ion-buttons slot="start" >
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mt-3">
+          <h1>Company's History</h1>
+          <hr class="line mb-2">
+        </div>
+      </div>
+    </div>
+    <ion-card>
+    <img class="pic" src="assets/others/assorted.jpg" class="center">
+<p class="color">
+The business started in 2022 as a small bakery shop and soon started to bloom with customers ordering locally in our physical store. Our team decided to build an application to accommodate our customers from the safety of their home. </p>
+<img class="pic" src="assets/others/bake2.jpg" class="center">
+<p class="color">With competing cookie shops in our area, our take is that CookieDelights is made to have sweet treats delivered fresh from the oven. CookieDelights is inspired by the idea of quick serving and freshness so we make sure that our products is delivered at your door on time.
+    </p>
+
+    </ion-card>
+   <div class="container">
+    <div class="row">
+      <div class="col me-2 mb-4">
+        <h6>©SweetCreations</h6>
+      </div>
+    </div>
+  </div>
+    </ion-content>
+</ion-app>

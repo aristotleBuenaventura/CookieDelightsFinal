@@ -1,0 +1,138 @@
+ion-content{
+
+    --ion-background-color:#e9dac1;
+    
+  }
+
+.header{
+    --background: #603813;
+    color:#F5B97D;
+}
+
+ion-menu-button{
+    --background-icon: #F5B97D;
+}
+
+.title{
+  font-family: 'Vanilla';
+  font-size: 26px;
+}
+
+p{
+  color: #603813;
+}
+.line{
+  width:100%; 
+  height:5px; 
+  background: #603813;
+  margin: 0;
+}
+
+.line-product{
+  width:88%; 
+  height:5px; 
+  background: #603813;
+  margin: 0;
+}
+
+.cookieName{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.box{
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.btn{
+  background-color: #603813;
+  width: 80px;
+  height: 40px;
+}
+
+.icon{
+  height: 15px;
+}
+
+.price{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+img { margin: 0;
+}
+.container{
+  position: relative;
+}
+.cookieImage{
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  top: 85px;
+}
+
+.cookieImageGinger{
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+}
+
+.cookieImageOatmeal{
+  height: 140px;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+}
+
+.cookieImagePeanut{
+  height: 110px;
+  position: absolute;
+  z-index: 1;
+  top: 85px;
+}
+
+.cookieImageWhoopie{
+  height: 140px;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+}
+
+.cookieImageSugar{
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+}
+
+.cookieImageBiscotti{
+  height: 110px;
+  position: absolute;
+  z-index: 1;
+  top: 85px;
+}
+
+.cookieImageSpritz{
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  top: 65px;
+}
+
+.cookieImagePinwheel{
+  height: 120px;
+  position: absolute;
+  z-index: 1;
+  top: 55px;
+}
+
+.cookieImageButter{
+  height: 140px;
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+}
+
+

@@ -1,0 +1,45 @@
+<ion-app>
+  <app-splash-screen></app-splash-screen>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="header">
+      <ion-title class="header">
+        Home
+      </ion-title>
+      <ion-buttons slot="start" >
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    
+    
+    <img class="pic" src="assets/icons/Opn.png" class="center">
+    <h1>"A Quick Bite for a Sweet Appetite"</h1>
+    <br>
+    <ion-card>
+    <p class="left">
+      Craving for some crunchy
+      <br>
+      soft desserts? We got you covered.
+      <br>
+      <br>
+      Here in Cookie Delight, we serve
+      <br>
+      cookies fresh from the oven in
+      <br>
+      bundles!
+    </p>
+    </ion-card>
+    <ion-button class="started" expand="block" fill="clear" routerLink="/products">
+        Click here to get started!
+    </ion-button>
+
+    </ion-content>
+</ion-app>

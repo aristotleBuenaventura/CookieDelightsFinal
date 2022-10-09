@@ -1,0 +1,75 @@
+<ion-app>
+  <ion-menu menuId="main-menu" contentId="main" >
+    <ion-content >
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <ion-label>
+          <img class="smallLogo" src="assets/icons/smallCookie.png" alt="cookieLogo">
+          <div class="ms-4">
+            <h1 class="menuTitle mb-2 ms-5">COOKIE DELIGHTS</h1>
+            <h6 class=" ms-5" style="font-family:'blackjack';">"A quick bite for a sweet appetite"</h6>
+            <h6 class="ms-5 mt-2" id="slogan" style="font-family:'blackjack';">Ⓒ Sweet Creations</h6>
+          </div>
+          <br>
+          <br>
+          <hr class="line">
+        </ion-label>
+      </div>
+      <ion-list class="menu-items" lines="none" >
+        <ion-menu-toggle >
+          <ion-item routerLink="/home" >
+            <ion-icon name="home"></ion-icon>Home
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/products">
+            <ion-icon name="cart"></ion-icon>Products
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/know-your-cookies">
+            <ion-icon name="help-circle"></ion-icon>About our Cookies
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/daily-recipe">
+            <ion-img src="assets/icons/recipeIcon.png" class="icon me-3"></ion-img>Daily Recipe
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/cookie-prep">
+            <ion-img src="assets/icons/cookieIcon.png" class="icon me-3"></ion-img>Cookie Preparation
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/shop-policy">
+            <ion-img src="assets/icons/policyIcon.png" class="icon me-3"></ion-img>Shop Policy
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/company-history">
+            <ion-icon name="information-circle"></ion-icon>Company History
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/about-the-app">
+            <ion-icon name="information-circle"></ion-icon>About the App
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/developers">
+            <ion-icon name="people"></ion-icon>Developers
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/contact-us">
+            <ion-icon name="call"></ion-icon>Contact Us
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <ion-img src="assets/icons/cookies.png" class="cookies"></ion-img>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
+ 

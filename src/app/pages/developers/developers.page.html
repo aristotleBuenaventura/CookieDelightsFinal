@@ -1,0 +1,69 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar class="header">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="header">Developers</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mt-3">
+          <p class="title">Developers</p>
+          <hr class="line mb-2">
+        </div>
+      </div>
+    </div>
+  <ion-card>
+  <ion-grid>
+ <ion-row>
+  <ion-col><img src="assets/people/buenaventura.png" class="image-border"></ion-col>
+  <ion-col>
+    <p>Name</p>
+    <h1 class="content">Aristotle C. Buenaventura</h1>
+    <p>Contact</p>
+    <h1 class="content">09972262437</h1>
+  </ion-col>
+ </ion-row>
+<br>
+ <ion-row>
+  <ion-col><img src="assets/people/franco.jpg" class="image-border"></ion-col>
+  <ion-col>
+    <p>Name</p>
+    <h1 class="content">Rembranth L. Franco</h1>
+    <p>Contact</p>
+    <h1 class="content">09052543722</h1>
+  </ion-col>
+ </ion-row>
+<br>
+ <ion-row>
+  <ion-col><img src="assets/people/moraga.png" class="image-border"></ion-col>
+  <ion-col>
+    <p>Name</p>
+    <h1 class="content">Kathlynne Joy Moraga</h1>
+    <p>Contact</p>
+    <h1 class="content">09478587735</h1>
+  </ion-col>
+ </ion-row>
+</ion-grid>
+</ion-card>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col me-2">
+      <h6>©SweetCreations</h6>
+    </div>
+  </div>
+</div>
+
+</ion-content>

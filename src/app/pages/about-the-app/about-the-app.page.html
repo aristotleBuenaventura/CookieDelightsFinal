@@ -1,0 +1,46 @@
+<ion-app>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="header">
+      <ion-title class="header">
+        About the App
+      </ion-title>
+      <ion-buttons slot="start" >
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mt-3">
+          <h1>About <br>CookieDelights</h1>
+          <hr class="line mb-2">
+        </div>
+      </div>
+    </div>
+    <ion-card>
+    <p id="center">
+      "A quick bite for a sweet appetite"</p>
+
+<p class="color">
+  Our company aims to provide the savory and sweetness of every child with our delicious treats. Deliver smiles and joy as we feed them energy to face a brand new day! The application is created for the convenience of everyone so that they can order anywhere and anytime, our company wants to bring joy through mouth-watering cookies that will surely make anyone's day better. We established multiple branches and physical stores for those who are interested in trying more bold experience to eat our special pastries that is served just for everyone.</p>
+<img class="pic" src="assets/others/bake1.jpg" class="center">
+
+    </ion-card>
+   <div class="container">
+    <div class="row">
+      <div class="col me-2 mb-4">
+        <h6>©SweetCreations</h6>
+      </div>
+    </div>
+  </div>
+    </ion-content>
+</ion-app>

@@ -1,0 +1,112 @@
+<ion-app class="text-color">
+  <ion-header>
+    <ion-toolbar class="header">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu" color="danger"></ion-menu-button>
+      </ion-buttons> 
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      
+      <ion-title class="header">Daily Recipe</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content >
+    <div class="container">
+      <div class="row">
+        <div class="col ">
+          <h1 class="title">Daily Recipe</h1>
+          <hr class="line mb-4">
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="assets/chococc.jpg">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h1>Chocolate Chip Cookies</h1>
+        </div>
+      </div>
+    </div>
+    <ion-card>
+      <div class="container">
+
+        <p><b>Description:</b> These super soft and chewy chocolate chip cookies are the most popular cookie recipe around the world. Melted butter, 1 extra egg yolk, and more brown sugar than white sugar guarantees the chewiest chocolate chip cookie texture. Chilling the cookie dough is imperative. No mixer required! </p>
+        <p><b>Ingredients:</b> </p>
+        <ul type="disc">
+          <li>2 and 1/4 ups all-purpose flour </li>
+          <li>1 teaspoon baking soda</li>
+          <li>1 and 1/2 teaspoons cornstarch</li>
+          <li>1/2 teaspoon salt</li>
+          <li>3/4 cup unsalted butter</li>
+          <li>3/4 cup packed light or dark brown sugar</li>
+          <li>1/2 cup granulated sugar</li>
+          <li>1 large egg + 1 egg yolk</li>
+          <li>2 teaspoons vanilla extract</li>
+        </ul>
+        <p><b>Toppings:</b> </p>
+        <ul>
+          <li>1 and 1/4 cups chocolate chips</li>
+        </ul>
+        <p><b>Materials Needed:</b> </p>
+        <ul type="disc">
+          <li>Cookie sheets/ Baking sheets </li>
+          <li>Parchment paper</li>
+          <li>2 Mixing bowl/li>
+          <li>Whisk</li>
+          <li>Hand mixer/Stand mixer (optional)</li>
+          <li>Measuring cups and spoons</li>
+          <li>1/2 cup granulated sugar</li>
+          <li>Scraper</li>
+          <li>Sifter and Spatula (for leveling)</li>
+          <li>Cookie scooper (optional)</li>
+        </ul>
+        <p><b>Procedures:</b> </p>
+        <p class="center">Preparation</p>
+        <ol>
+          <li>  Preheat oven to 325°F (163°C). Line two large baking sheets with parchment paper or silicone baking mats. Set aside.</li>
+          <li>	Whisk the flour, baking soda, cornstarch, and salt together in a large bowl. Set aside.</li>
+          <li>  In a medium bowl, whisk the melted butter, brown sugar, and granulated sugar together until no brown sugar lumps remain. Whisk in the egg, then the egg yolk. Finally, whisk in the vanilla extract. Pour the wet ingredients into the dry ingredients and mix together with a large spoon or rubber spatula. The dough will be very soft, yet thick. Fold in the chocolate chunks. They may not stick to the dough because of the melted butter but do your best to combine them. Cover the dough and chill in the refrigerator for 2-3 hours or up to 3-4 days. Chilling is mandatory. I highly recommend chilling the cookie dough overnight for less spreading. </li>
+          <li>  Take the dough out of the refrigerator and allow to slightly soften at room temperature for 10 minutes.</li>
+          <li>  Roll the dough into balls, about 3 Tablespoons of dough each. The dough will be crumbly, but the warmth of your hands will help the balls stay together. Roll the cookie dough balls to be taller rather than wide, to ensure the cookies will bake up to be thick. Place 8 balls of dough onto each cookie sheet. Press a few more chocolate chips/chunks on top of the dough balls for looks, if desired.
+          </li>
+        </ol>
+        <p class="center">Baking</p>
+        <ol>
+          <li>
+              Bake the cookies for 12-13 minutes. The cookies will look very soft and underbaked. They will continue to bake on the cookie sheet. Allow to cool on the cookie sheet for 10 minutes before transferring to a wire rack to cool completely.
+          </li>
+        </ol>
+        <p class="center">Final Touches</p>
+        <ol>
+          <li>
+            Add more chocolate chips while still warm (optional)
+          </li>
+          <li>
+            Cookies stay fresh covered at room temperature for up to 1 week. Serve while warm.
+          </li>
+        </ol>
+        <p><b>Total Time:</b>3 hours,22 minutes</p>
+        <p><b>Servings:</b>16 large cookies</p>
+      </div>
+    </ion-card>
+    <div class="container box">
+      <div class="row">
+        <div class="col me-2 mb-4">
+          <h6>©SweetCreations</h6>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  
+</ion-app>
+

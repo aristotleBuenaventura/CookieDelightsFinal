@@ -1,0 +1,44 @@
+<ion-app>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="header">
+      <ion-title class="header">
+        Contact Us
+      </ion-title>
+      <ion-buttons slot="start" >
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openCart()" #cart class="cart">
+          <div class="cart-length">{{cartItemCount | async }}</div>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    
+    <img class="pic" src="assets/icons/conts.png" class="center">
+    <h1>
+      Open Mondays - Fridays
+      <br>
+      8:00 AM to 6:00 PM 
+    </h1>
+    <ion-card>
+    <p class="left">
+      Cellphone#: 0924-895-2314<br>
+      Telephone#: 3534-1283<br>
+      Address: 1197 Jorge Bocobo Street,<br>
+      Manila, 1000 Metro Manila<br>
+    </p>
+    </ion-card>
+    <div class="container">
+      <div class="row">
+        <div class="col me-2">
+          <h6>©SweetCreations</h6>
+        </div>
+      </div>
+    </div>
+  
+    </ion-content>
+</ion-app>

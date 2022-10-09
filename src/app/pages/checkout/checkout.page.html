@@ -1,0 +1,97 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar class="header">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu" class="header"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mt-3">
+          <p class="title">Checkout</p>
+          <hr class="line mb-2">
+        </div>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item *ngFor="let p of cart" class="ion-text-wrap">
+        <ion-grid>
+          <ion-row class="ion-align-items-center">
+            <!-- <ion-col size="2" class="ion-align-self-center">
+              <ion-button color="medium" fill="clear" (click)="decreaseCartItem(p)">
+                <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+              </ion-button>
+            </ion-col> -->
+   
+            <ion-col size="1" class="ion-align-self-center">
+              
+            </ion-col>
+   
+            <!-- <ion-col size="2" class="ion-align-self-center">
+              <ion-button color="medium" fill="clear" (click)="increaseCartItem(p)">
+                <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+              </ion-button>
+            </ion-col>
+   
+            <ion-col size="2" offset="5">
+              <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
+                <ion-icon name="close-circle" slot="icon-only"></ion-icon>
+              </ion-button>
+            </ion-col> -->
+          </ion-row>
+   
+   
+          <ion-row>
+            <ion-col size="4">
+              <b>{{ p.name }}</b>
+              <img src={{p.image}}>
+            </ion-col>
+            <ion-col size="4">
+              Amount {{ p.amount }}
+            </ion-col>
+            <ion-col size="4" class="ion-text-end">
+              {{ p.amount * p.price | currency:'PHP' }}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+     
+    </ion-list>
+  
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="7">
+            Total:
+          </ion-col>
+          <ion-col size="5" class="ion-text-end">
+            {{ getTotal() | currency:'PHP' }} 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <button type="button"  class="btn text-light mb-3" routerLink="/receipt">Confirm</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button type="button"  class="btn btn2 text-light" routerLink="/products">Back</button>
+        </div>
+      </div>
+    </div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col me-2">
+      <h6>©SweetCreations</h6>
+    </div>
+  </div>
+</div>
+
+</ion-content>
